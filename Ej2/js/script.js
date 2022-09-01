@@ -19,4 +19,9 @@ const showList = (arr) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   showList(people);
+  const button = document.getElementById("dontAccept");
+  button.addEventListener("click", () => {
+    const oldPeople = people.filter((item) => item.age >= 23);
+    showList(oldPeople);
+  });
 });

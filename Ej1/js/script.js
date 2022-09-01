@@ -17,3 +17,16 @@ const strangeArray = [
   "b",
 ];
 
+function addListItem(item) {
+  const list = document.getElementById("list");
+  list.innerHTML += `<li>${item}</li>`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filteredArray = strangeArray.filter(
+    (element) => typeof element === "string"
+  );
+  for( let element of filteredArray){
+  addListItem(element);
+  }
+});
